@@ -9,24 +9,17 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-
+    - content.code.copy
+    - content.tabs.link
+    - content.tabs.link
+plugins:
+  - search
 nav:
   - Home: index.md
-  - Getting Started:
-    - Installation: getting-started/installation.md
-    - Quick Start: getting-started/quick-start.md
-  - Features:
-    - Core Features: features/core-features.md
-    - Architecture: features/architecture.md
-  - API Reference:
-    - API Overview: api/overview.md
-    - Endpoints: api/endpoints.md
 
 markdown_extensions:
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - admonition
-  - footnotes
-  - toc:
-      permalink: true 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
